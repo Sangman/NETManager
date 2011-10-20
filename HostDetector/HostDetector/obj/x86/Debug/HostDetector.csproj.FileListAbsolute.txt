@@ -1,0 +1,5 @@
+c:\users\cedric\documents\visual studio 2010\Projects\HostDetector\HostDetector\bin\Debug\HostDetector.exe
+c:\users\cedric\documents\visual studio 2010\Projects\HostDetector\HostDetector\bin\Debug\HostDetector.pdb
+c:\users\cedric\documents\visual studio 2010\Projects\HostDetector\HostDetector\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\cedric\documents\visual studio 2010\Projects\HostDetector\HostDetector\obj\x86\Debug\HostDetector.exe
+c:\users\cedric\documents\visual studio 2010\Projects\HostDetector\HostDetector\obj\x86\Debug\HostDetector.pdb
