@@ -3,3 +3,5 @@ c:\users\cedric\documents\visual studio 2010\Projects\HostDetector\HostDetector\
 c:\users\cedric\documents\visual studio 2010\Projects\HostDetector\HostDetector\obj\x86\Debug\ResolveAssemblyReference.cache
 c:\users\cedric\documents\visual studio 2010\Projects\HostDetector\HostDetector\obj\x86\Debug\HostDetector.exe
 c:\users\cedric\documents\visual studio 2010\Projects\HostDetector\HostDetector\obj\x86\Debug\HostDetector.pdb
+C:\Users\Cedric\documents\visual studio 2010\Projects\HostDetector\HostDetector\bin\Debug\netscan.dll
+C:\Users\Cedric\documents\visual studio 2010\Projects\HostDetector\HostDetector\bin\Debug\netscan.pdb

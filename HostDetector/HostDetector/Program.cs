@@ -11,93 +11,29 @@ using System.IO;
 using System.Net.NetworkInformation;
 using System.Threading;
 using System.Runtime.InteropServices;
+using netscan;
 
 namespace HostDetector {
     
     class Program {
-        [DllImport("iphlpapi.dll", ExactSpelling = true)]
-        public static extern int SendARP(int DestIP, int SrcIP, byte[] pMacAddr, ref uint PhyAddrLen);
 
-        public List<IPAddress> activeIPs;
-        public List<String> activeMacs;
 
-        public static void Main(string[] args) {            
-            Console.WriteLine("HostDetector Program is attempting to detect hosts");
-            Console.WriteLine("The first step in doing this is clearing your ARP cache.");
-
-            Program prog = new Program();
-            prog.activeIPs = new List<IPAddress>();
-            prog.activeMacs = new List<String>();
-
-            if (prog.ClearARPCache()) {
-                Console.WriteLine("ARP cache cleared.");
-            }
-            else {
-                Console.WriteLine("Something went wrong while trying to clear ARP cache.");
-            }
-
-            Console.WriteLine("The second step is re-acquiring ARP information. Sending ARP messages to hosts.");
-
-                    // this needs rewriting
-                    //for (int k = 64; k <= 95; k++) {
-                        for (int j = 1; j <= 254; j++) {
-                            try {
-                                Thread t = new Thread(new ParameterizedThreadStart(prog.SendARPMessage));
-                                t.Start(IPAddress.Parse("192.168.0." + j));
-                            }
-                            catch (OutOfMemoryException) {
-                                Console.WriteLine("OOM");
-
-                                // out of memory, just wait a few seconds for existing threads to finish
-                                Thread.Sleep(1000);
-
-                                // decrement j
-                                j--;
-                            }
-                        }
-                    //}
-
-                    // wait a few seconds for threads to finish
-                    Thread.Sleep(9000);
-                    Console.WriteLine("The following IPs have been determined as being up:");
-                    
-                    for (int i = 0; i < prog.activeIPs.Count; i++) {
-                        Console.WriteLine("=================================================");
-                        Console.WriteLine("IP Address " + prog.activeIPs[i].ToString() + " is up.");
-                        
-                        try {
-                            IPHostEntry iphe = Dns.GetHostByAddress(prog.activeIPs[i]);
-                            Console.WriteLine("Hostname: " + iphe.HostName);
-                        }
-                        catch (SocketException) {
-                            Console.WriteLine("Hostname: Couldn't determine hostname. Possibly this machine has been secured.");
-                        }
-                        Console.WriteLine("MAC Address: " + prog.activeMacs[i]);
-                        Console.WriteLine("Device type: ");
-                        Console.WriteLine("=================================================");
-
-                    }            
+        public static void Main(string[] args) {
+            Scanner.OnHostFound += new netscan.Events.HostFoundHandler(Scanner_OnHostFound);
+            Scanner.ScanNetworkIPv4(IPAddress.Parse("10.0.0.1"), IPAddress.Parse("10.0.0.255"));
+            
+            // don't terminate program:
+            Console.ReadLine();
         }
 
-        public void SendARPMessage(object dest) {
-            IPAddress dst = IPAddress.Parse(dest.ToString());
-            byte[] macAddr = new byte[6];
-            uint macAddrLen = (uint)macAddr.Length;
-            if (SendARP((int)dst.Address, 0, macAddr, ref macAddrLen) == 0) {
-                string[] str = new string[(int)macAddrLen];
-                for (int i = 0; i < macAddrLen; i++)
-                    str[i] = macAddr[i].ToString("x2");
-
-                //Console.WriteLine(DateTime.Now.TimeOfDay + " IP Address " + dst.ToString() + " found at " + string.Join(":", str));
-
-                activeIPs.Add(dst);
-                String mac = string.Join("-", str);
-                activeMacs.Add(mac.ToUpper());
-            }
-            else {
-                //Console.WriteLine("Nothing found at " + dst.ToString());
-            }
+        public static void Scanner_OnHostFound(netscan.Events.HostFoundArgs e) {
+            Console.WriteLine(Environment.NewLine+"======================================");
+            Console.WriteLine("IP "+e.Host.IPV4+" is up.");
+            Console.WriteLine("MAC: " + e.Host.Mac);
+            Console.WriteLine("Hostname: " + e.Host.Hostname);
+            Console.WriteLine("======================================"+Environment.NewLine);
         }
+
 
         /// <summary>
         /// Clear ARP cache using CMD prompt. This requires that you elevate user rights first (call ElevateRights).
