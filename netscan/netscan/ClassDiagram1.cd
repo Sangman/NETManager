@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="netscan.Events.ARPReplyArgs">
+    <Position X="5.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgAAEBAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\ARPReplyArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="netscan.Events.HostFoundArgs">
+    <Position X="6.75" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\HostFoundArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="netscan.Exceptions.CMDException">
+    <Position X="8" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\CMDException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="netscan.Internal.ARP">
+    <Position X="2.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAgAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Internal\ARP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="netscan.NetworkDevice">
+    <Position X="0.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAABIAAAACAAAAgAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>NetworkDevice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="netscan.Scanner">
+    <Position X="4.25" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAABAAAAABAAA=</HashCode>
+      <FileName>Scanner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="netscan.Tools">
+    <Position X="2.5" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utilities\Tools.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Delegate Name="netscan.Events.ARPReplyHandler">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\Events.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="netscan.Events.HostFoundHandler">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\Events.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

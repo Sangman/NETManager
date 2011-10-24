@@ -1,0 +1,5 @@
+c:\users\cedric\documents\visual studio 2010\Projects\netscan\netscan\obj\Debug\ResolveAssemblyReference.cache
+c:\users\cedric\documents\visual studio 2010\Projects\netscan\netscan\bin\Debug\netscan.dll
+c:\users\cedric\documents\visual studio 2010\Projects\netscan\netscan\bin\Debug\netscan.pdb
+c:\users\cedric\documents\visual studio 2010\Projects\netscan\netscan\obj\Debug\netscan.dll
+c:\users\cedric\documents\visual studio 2010\Projects\netscan\netscan\obj\Debug\netscan.pdb
