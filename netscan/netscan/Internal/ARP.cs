@@ -26,7 +26,6 @@ namespace netscan.Internal {
         /// <param name="ipv4">A valid IPv4 address.</param>
         public static void SendARPMessageIPv4(object ipv4) {
             IPAddress dst = IPAddress.Parse(ipv4.ToString());
-            IPAddress src = IPAddress.Parse("10.0.0.1");
             byte[] macAddr = new byte[6];
             uint macAddrLen = (uint)macAddr.Length;
 

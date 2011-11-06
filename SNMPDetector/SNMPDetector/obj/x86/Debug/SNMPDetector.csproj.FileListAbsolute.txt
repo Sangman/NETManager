@@ -1,0 +1,8 @@
+c:\users\cedric\documents\visual studio 2010\Projects\SNMPDetector\SNMPDetector\bin\Debug\SNMPDetector.exe
+c:\users\cedric\documents\visual studio 2010\Projects\SNMPDetector\SNMPDetector\bin\Debug\SNMPDetector.pdb
+c:\users\cedric\documents\visual studio 2010\Projects\SNMPDetector\SNMPDetector\bin\Debug\snmputil.dll
+c:\users\cedric\documents\visual studio 2010\Projects\SNMPDetector\SNMPDetector\bin\Debug\SharpSnmpLib.dll
+c:\users\cedric\documents\visual studio 2010\Projects\SNMPDetector\SNMPDetector\bin\Debug\snmputil.pdb
+c:\users\cedric\documents\visual studio 2010\Projects\SNMPDetector\SNMPDetector\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\cedric\documents\visual studio 2010\Projects\SNMPDetector\SNMPDetector\obj\x86\Debug\SNMPDetector.exe
+c:\users\cedric\documents\visual studio 2010\Projects\SNMPDetector\SNMPDetector\obj\x86\Debug\SNMPDetector.pdb

@@ -1,0 +1,5 @@
+c:\users\cedric\documents\visual studio 2010\Projects\snmputil\snmputil\bin\Debug\snmputil.dll
+c:\users\cedric\documents\visual studio 2010\Projects\snmputil\snmputil\bin\Debug\snmputil.pdb
+c:\users\cedric\documents\visual studio 2010\Projects\snmputil\snmputil\obj\Debug\ResolveAssemblyReference.cache
+c:\users\cedric\documents\visual studio 2010\Projects\snmputil\snmputil\obj\Debug\snmputil.dll
+c:\users\cedric\documents\visual studio 2010\Projects\snmputil\snmputil\obj\Debug\snmputil.pdb
